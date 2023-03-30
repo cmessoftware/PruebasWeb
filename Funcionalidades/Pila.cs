@@ -3,14 +3,18 @@
     public class Pila
     {
 
+        List<int> pila = new List<int>();
+
         public int Pop()
         {
-            return 0;
+            var elemento = pila.Last();
+            pila.RemoveAt(pila.Count - 1);
+            return elemento;
         }
 
-        public void Push(int elem) 
+        public void Push(int n) 
         {
-            
+            pila.Add(n); 
         }
     }
 }
